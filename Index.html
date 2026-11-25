@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Patio, cocina de casa desde 1999</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141b17;--bg2:#1b251f;--ink:#ebe5d4;--mute:#a9b3a2;--sage:#8fa58a;--brass:#c8a96b;--line:rgba(200,169,107,.35);
+--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:"Jost","Helvetica Neue",Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.6 var(--sans);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 20% 0,rgba(143,165,138,.16),transparent 55%),radial-gradient(ellipse at 90% 60%,rgba(200,169,107,.09),transparent 50%);pointer-events:none}
+a{color:var(--brass)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.sprig{fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round}
+.fall{position:fixed;top:-60px;width:34px;color:var(--sage);opacity:.22;pointer-events:none;animation:fall linear infinite;z-index:0}
+@keyframes fall{to{transform:translate(60px,110vh) rotate(300deg)}}
+header,main,footer{position:relative;z-index:1}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;max-width:1100px;margin:0 auto;padding:4.5rem 1.5rem 3rem;min-height:86vh}
+.hero h1{font:600 clamp(3.4rem,9vw,6.6rem)/.92 var(--serif);margin:0 0 .4em;letter-spacing:-.01em}
+.hero .sub{font:italic 400 1.6rem var(--serif);color:var(--brass);margin:0 0 1rem}
+.hero p{max-width:30em;color:var(--mute);margin:0 0 1.8rem}
+.btn{display:inline-block;border:1px solid var(--brass);color:var(--ink);text-decoration:none;padding:.7rem 1.4rem;border-radius:999px;font-weight:400;transition:background .2s}
+.btn:hover{background:rgba(200,169,107,.16)}
+.deck{position:relative;aspect-ratio:1;width:min(100%,440px);justify-self:center}
+.rec{position:absolute;inset:0;border-radius:50%;background:repeating-radial-gradient(circle,#0b0e0c 0 2px,#161c18 2px 4px);box-shadow:0 30px 60px rgba(0,0,0,.55),inset 0 0 0 6px #0b0e0c;animation:spin 9s linear infinite}
+.rec::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 20deg,transparent 0 18%,rgba(255,255,255,.1) 25%,transparent 32% 68%,rgba(255,255,255,.08) 75%,transparent 82%)}
+.lab{position:absolute;inset:32%;border-radius:50%;background:var(--sage);color:#17201b;display:grid;place-items:center;text-align:center;font:600 1.05rem/1.1 var(--serif);box-shadow:0 0 0 5px rgba(0,0,0,.25)}
+.lab small{display:block;font:400 .6rem var(--sans);letter-spacing:.1em}
+.lab::after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--bg)}
+.arm{position:absolute;right:-6%;top:-4%;width:46%;height:70%;transform-origin:88% 8%;transform:rotate(-8deg);animation:arm 6s ease-in-out infinite alternate}
+.arm i{position:absolute;right:10%;top:4%;width:7px;height:78%;background:linear-gradient(var(--brass),#8a7240);border-radius:4px;transform:rotate(14deg);transform-origin:top}
+.arm b{position:absolute;right:-2%;top:0;width:22px;height:22px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 5px var(--bg2)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes arm{to{transform:rotate(-3deg)}}
+.deck .sprig{position:absolute;left:-14%;bottom:-8%;width:46%;color:var(--sage);opacity:.8}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(20,27,23,.92);backdrop-filter:blur(8px);border-block:1px solid var(--line)}
+nav div{max-width:1100px;margin:0 auto;display:flex;gap:.4rem;padding:.6rem 1rem;overflow-x:auto}
+nav button{flex:none;background:none;border:1px solid transparent;color:var(--mute);font:400 1rem var(--sans);padding:.5rem 1.1rem;border-radius:999px;cursor:pointer}
+nav button[aria-selected=true]{color:var(--ink);border-color:var(--brass);background:rgba(200,169,107,.12)}
+.menu{max-width:1100px;margin:0 auto;padding:3.5rem 1.5rem 2rem}
+.side{display:flex;align-items:baseline;gap:1rem;margin-bottom:2rem}
+.side h2{font:600 clamp(2.2rem,5vw,3.4rem)/1 var(--serif);margin:0}
+.side span{font:italic 400 1.2rem var(--serif);color:var(--brass)}
+.cols{columns:2 420px;column-gap:3.5rem}
+.blk{break-inside:avoid;margin:0 0 2.4rem;padding-top:1rem;border-top:1px solid var(--line)}
+.blk h3{display:flex;justify-content:space-between;gap:1rem;font:600 1.55rem/1.15 var(--serif);margin:0 0 .25rem}
+.blk h3 em{font-style:normal;color:var(--brass);white-space:nowrap}
+.blk .n{margin:.1rem 0 .6rem;color:var(--mute);font-size:.92rem}
+.blk ul{list-style:none;margin:0;padding:0}
+.blk li{display:flex;align-items:baseline;gap:.5rem;padding:.18rem 0}
+.blk li .l{flex:1;border-bottom:1px dotted rgba(235,229,212,.28);transform:translateY(-.3em)}
+.blk li b{font-weight:500;color:var(--brass)}
+.blk li small{display:block;color:var(--mute);font-size:.82rem;line-height:1.35}
+.tag{display:flex;flex-wrap:wrap;gap:.4rem;margin:.4rem 0 0;padding:0;list-style:none}
+.tag li{border:1px solid var(--line);border-radius:999px;padding:.1rem .8rem;font-size:.9rem;color:var(--ink)}
+.feat{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:1.2rem 1.3rem}
+.panel[hidden]{display:none}
+.visit{background:var(--bg2);border-block:1px solid var(--line);margin-top:2rem}
+.visit div{max-width:1100px;margin:0 auto;padding:3.5rem 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.visit h2{font:600 2.6rem/1 var(--serif);margin:0 0 .6rem}
+.visit p{margin:.3rem 0;color:var(--mute)}
+.visit .sprig{width:min(100%,260px);justify-self:end;color:var(--sage);opacity:.7}
+footer{text-align:center;padding:2rem 1.5rem 3rem;color:var(--mute);font-size:.88rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:2.5rem;min-height:0}.deck{order:-1;width:min(78%,320px)}.visit div{grid-template-columns:1fr}.visit .sprig{justify-self:start}}
+@media(prefers-reduced-motion:reduce){.rec,.arm,.fall{animation:none}.fall{display:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="sp" viewBox="0 0 120 200"><path class="sprig" d="M60 198C58 140 62 80 70 6"/><path class="sprig" d="M60 170c-24-4-38-20-42-40 22 2 38 16 42 40zM61 140c24-6 36-22 38-42-22 4-36 18-38 42zM62 108c-22-4-34-18-38-36 20 2 34 14 38 36zM64 78c20-6 30-20 32-38-20 4-30 16-32 38zM67 48c-14-4-22-14-24-28 14 2 22 12 24 28z"/><path class="sprig" d="M60 170c-8-10-14-24-14-34M61 140c8-12 18-26 24-38M62 108c-6-8-10-18-12-26M64 78c6-10 14-20 20-30"/></symbol></defs></svg>
+<div id="fall" aria-hidden="true"></div>
+
+<header>
+ <div class="hero">
+  <div>
+   <p class="sub">Cocina de casa, desde 1999</p>
+   <h1>El Patio</h1>
+   <p>Un patio con plantas, discos de vinilo sonando de fondo y comida hecha al momento. Ven a desayunar, a comer o a quedarte un rato más.</p>
+   <a class="btn" href="#carta">Ver la carta</a>
+  </div>
+  <div class="deck" aria-hidden="true">
+   <div class="rec"><div class="lab"><div>El Patio<small>DESDE 1999</small></div></div></div>
+   <div class="arm"><i></i><b></b></div>
+   <svg class="sprig" viewBox="0 0 120 200"><use href="#sp"/></svg>
+  </div>
+ </div>
+</header>
+
+<nav id="carta"><div role="tablist" aria-label="Carta"></div></nav>
+<main class="menu" id="panels"></main>
+
+<section class="visit">
+ <div>
+  <section>
+   <h2>Visítanos</h2>
+   <p>Av. 1° de Mayo, Manzana 031, San Lorenzo, 54000 Tlalnepantla, Estado de México.</p>
+   <p>Tel. <a href="tel:+525569395408">55 6939 5408</a></p>
+   <p>Instagram <a href="https://www.instagram.com/elpatio_rest" target="_blank" rel="noopener">@elpatio_rest</a></p>
+   <p><a href="https://share.google/jo8pHwcm10a6oHSkU" target="_blank" rel="noopener">Cómo llegar en Google Maps</a></p>
+  </section>
+  <svg class="sprig" viewBox="0 0 120 200" aria-hidden="true"><use href="#sp"/></svg>
+ </div>
+</section>
+<footer>Todos nuestros platillos son preparados al momento. Gracias por tu visita y por el tiempo de espera.<br>Maqueta visual de ejemplo, no es el sitio oficial.</footer>
+
+<script>
+const D=[
+{id:'des',tab:'Desayunos',side:'Lado A',sub:'Para empezar bien el día',b:[
+{h:'Todos incluyen',cls:'feat',tags:['Jugo natural y fruta','Café o té','Frijoles refritos']},
+{h:'Huevos al gusto',p:135,tags:['Salchicha','Chorizo','Rancheros','Divorciados','Al albañil','A la mexicana','Jamón','Tocino']},
+{h:'Omelette',n:'Mezcla de quesos con:',i:[['Jamón',162],['Chorizo',162],['Tocino',168],['Champiñón',143],['Vegetariano',156,'Champiñón, espinaca y queso panela']]},
+{h:'Club Sandwich del Patio',p:168,n:'Pan de masa madre con crujientes papas a la francesa.'},
+{h:'Chilaquiles sencillos',p:125,n:'Salsa verde, ranchera o mole, con frijoles refritos. Agrega:',i:[['Pollo deshebrado',140],['Carne asada',155],['Huevo',137],['Pechuga asada',155],['Pechuga empanizada',168],['Milanesa de res',168]]},
+{h:'Enchiladas rellenas de pollo',p:144,n:'Verdes, rojas o enmoladas. Gratinadas por $24 más.'},
+{h:'Molletes de queso (2 pz)',p:132,n:'Pan crujiente con mezcla de quesos gratinados. Con:',i:[['Jamón',148],['Chorizo',148],['Tocino',158],['Pechuga asada',168],['Pechuga empanizada',178],['Milanesa',178],['Molletes El Patio',165,'Gouda, mozzarella y parmesano con tocino crujiente y rebanadas de aguacate']]}]},
+{id:'com',tab:'Comida',side:'Lado B',sub:'Menús de la comida',b:[
+{h:'Menú de El Patio',p:135,n:'Dos tiempos a elegir. Incluye vaso de agua y plato de frijoles refritos.',i:[['Primer tiempo','','Consomé o sopa del día'],['Segundo tiempo','','Pasta (quesos, boloñesa, al burro o pesto) o arroz. Agrega plátano o huevo por $14']]},
+{h:'Tercer tiempo',n:'Pregunta por el guisado del día.',tags:['Pollo en mole verde','Pollo en mole rojo','Cochinita pibil','Enmoladas (3 pz)','Tacos dorados (3 pz)','Enchiladas verdes (3 pz)','Hazlas suizas por $24 más']},
+{h:'Menú ejecutivo',p:173,n:'Incluye guarnición de ensalada y papas a la francesa o vegetales. Primer y segundo tiempo a elegir, más:',i:[['Pechuga a la plancha'],['Pechuga empanizada'],['Pescaditos fritos (2 pz)'],['Milanesa de res'],['Filete de pescado','','Empanizado, empapelado, crema de chipotle o al ajillo'],['Parrillada argentina','','Chorizo argentino y chistorra'],['Carne asada']]},
+{h:'Menú especial',p:197,n:'Primer y segundo tiempo a elegir, más:',i:[['Hamburguesa Prime','','Pan brioche, 170 g de jugosa carne prime con queso amarillo, tocino y cebolla caramelizada, con papas a la francesa'],['Tampiqueña de arrachera','','150 g de jugosa arrachera con 2 dobladitas bañadas en la salsa que prefieras, papas a la francesa y guacamole']]}]},
+{id:'beb',tab:'Bebidas',side:'Lado C',sub:'Para acompañar',b:[
+{h:'Bebidas',i:[['Malteada a base de helado',80,'Chocolate, vainilla o fresa'],['Jugo de naranja natural, 420 ml',58],['Licuado, ½ litro',57,'Fresa, nuez, avena, plátano o chocolate'],['Licuado, 1 litro',75],['Agua embotellada',25],['Taza de café',35],['Taza de té',33]]}]},
+{id:'ext',tab:'Extras',side:'Bonus track',sub:'Por si te quedaste con ganas',b:[
+{h:'Extras',i:[['Orden de papas a la francesa',80],['Queso extra',35],['Orden de frijoles refritos de la casa',30],['Refil de vaso de agua',15],['Jarra de agua, 1 L',50]]}]}];
+const $=s=>document.querySelector(s),tabs=$('[role=tablist]'),pan=$('#panels'),m=v=>v===''||v==null?'':'$'+v;
+D.forEach((s,k)=>{
+ const t=document.createElement('button');t.role='tab';t.textContent=s.tab;t.id='t'+s.id;t.setAttribute('aria-controls','p'+s.id);tabs.append(t);
+ const p=document.createElement('section');p.className='panel';p.id='p'+s.id;p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby',t.id);
+ p.innerHTML=`<div class="side"><h2>${s.tab}</h2><span>${s.side}, ${s.sub.toLowerCase()}</span></div><div class="cols">`+s.b.map(b=>`<div class="blk ${b.cls||''}"><h3><span>${b.h}</span><em>${m(b.p)}</em></h3>${b.n?`<p class="n">${b.n}</p>`:''}${b.tags?`<ul class="tag">${b.tags.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}${b.i?`<ul>${b.i.map(i=>`<li><span>${i[0]}${i[2]?`<small>${i[2]}</small>`:''}</span><span class="l"></span><b>${m(i[1])}</b></li>`).join('')}</ul>`:''}</div>`).join('')+'</div>';
+ pan.append(p);t.onclick=()=>show(k);
+});
+function show(k){D.forEach((s,i)=>{$('#p'+s.id).hidden=i!==k;$('#t'+s.id).setAttribute('aria-selected',i===k)})}
+show(0);
+const f=$('#fall');for(let i=0;i<9;i++){const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 120 200');e.setAttribute('class','fall');e.innerHTML='<use href="#sp"/>';e.style.left=(i*11+Math.random()*8)+'%';e.style.animationDuration=(26+Math.random()*22)+'s';e.style.animationDelay=(-Math.random()*40)+'s';e.style.width=(22+Math.random()*26)+'px';f.append(e)}
+</script>
+</body>
+</html>
